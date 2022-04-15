@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+$base-font: (
+    quicksand: (
+        regular: (
+            family: ('Quicksand', sans-serif),
+            weight: 400,
+            style: normal
+        ),
+        bold: (
+            family: ('Quicksand', sans-serif),
+            weight: 600,
+            style: normal 
+        )
+    ),
+    abril: (
+        regular: (
+            family: ('Abril Fatface', cursive),
+            weight: 400,
+            style: normal
+        )
+    )
+);
+
+.app {
+    @include font(quicksand, regular);
+}
+
+.titre {
+    &--primaire {
+        @include font(abril, regular);
+        color: $color-primary;
+        font-size: 4rem;
+    }
+    &--secondaire {
+        @include font(abril, regular);
+        color: $color-white;
+        font-size: 2rem;
+    }
+    
+}
+

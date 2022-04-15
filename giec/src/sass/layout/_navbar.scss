@@ -1,0 +1,50 @@
+.header {
+    width: 100vw;
+    border-bottom: 1px solid $color-light;
+}
+
+.navbar {
+    margin: auto;
+    background-color: $color-white;
+    display: flex;
+    &_img {
+        height: 100px;
+    }
+    &_links {
+        flex-grow: 2;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        @include font(quicksand, bold);
+        color: $color-primary;
+        &_bloc{
+            margin: 1rem;
+            & span {
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0px;
+                    margin: 5px auto 0 auto;
+                    height: 2px;
+                    border-radius: 2px;
+                    background: $color-accent;
+                    transition: width 0.2s ease-out;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    & a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: $color-primary;
+        &:visited {
+            color: $color-primary;
+        }
+    }
+}

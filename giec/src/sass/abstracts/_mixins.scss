@@ -1,0 +1,8 @@
+@mixin font($group, $variant: regular) {
+    $font-group: map-get($base-font, $group);
+    $font-properties: map-get($font-group, $variant);
+    
+    @each $property, $values in $font-properties {
+        font-#{$property}: map-get($font-properties, $property);
+    }
+  }

@@ -1,0 +1,14 @@
+a.btn {
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 15px;
+    padding: 20px;
+    @include font(quicksand, bold);
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    &:hover {
+        background-color: $color-accent;
+        transition: all 600ms;
+    }
+}
