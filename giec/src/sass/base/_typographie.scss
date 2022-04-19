@@ -38,6 +38,11 @@ $base-font: (
         color: $color-white;
         font-size: 2rem;
     }
-    
+    &--tertiaire {
+        @include font(abril, regular);
+        color: $color-secondary;
+        font-size: 1.5rem;
+        padding: 1.5rem 0 1rem;
+    }
 }
 

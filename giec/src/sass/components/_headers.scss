@@ -30,15 +30,15 @@
 }
 
 .article_header {
-    padding-bottom: 50px;
-    padding-top: 50px;
-    width: 1400px;
-    max-width: 90%;
     margin: auto;
+    padding: 50px 0;
     color: $color-white;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    background-color: $color-primary;
+    > .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
     &_content {
         color: $color-white;
         padding-left: 30px;
