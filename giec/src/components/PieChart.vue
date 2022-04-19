@@ -22,6 +22,7 @@ export default {
     const ctx = document.getElementById('pie-chart');
     new Chart(ctx, this.pieChart);
     
+    Chart.defaults.font.family = "'Quicksand', sans-serif";
     Chart.defaults.font.size = 16;
   }
 }    

@@ -1,10 +1,14 @@
+import {Chart} from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+Chart.register(ChartDataLabels);
+
 export const pieChartDataWorld = {
     type: "doughnut",
     data: {
       labels: ["Production éléctrique", "Secteur de l'énergie hors élec", "Industrie", "Transport", "Residentiel","Tertiaire", "Agriculture", "Autre"],
       datasets: [
         {
-          data: [37, 19, 39, 126, 40, 22, 9, 3],
+          data: [13, 6, 13, 43, 14, 7, 3, 1],
           weight: 80,
           backgroundColor: [
             "#003259",
@@ -37,12 +41,17 @@ export const pieChartDataWorld = {
         padding: 20
       },
       plugins: {
+        datalabels: {
+          formatter: (value) => {
+            return value + '%';
+          }
+        },
         legend: {
           position: 'bottom',
           padding: {
             top: 10,
             bottom: 30
-        }
+          }
         },
         title: {
           display: true,
