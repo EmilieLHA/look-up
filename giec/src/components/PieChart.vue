@@ -1,6 +1,6 @@
 <template>
     <div class="canvas_container">
-        <canvas id="pie-chart">
+        <canvas :id="id">
             <p>Votre navigateur ne permet pas d'afficher le graphique</p>
         </canvas>
     </div>
@@ -9,21 +9,22 @@
 
 <script>
 import Chart from 'chart.js/auto';
-import {pieChartDataWorld} from '@/assets/datas/chartData.js'
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+Chart.register(ChartDataLabels);
 
 export default {
     name: 'PieChart',
-    data() {
-        return {
-            pieChart: pieChartDataWorld
-        }
+    props: {
+        chartData: Object,
+        id: String
     },
     mounted() {
-    const ctx = document.getElementById('pie-chart');
-    new Chart(ctx, this.pieChart);
+    const ctx = document.getElementById(this.id);
+    new Chart(ctx, this.chartData);
     
     Chart.defaults.font.family = "'Quicksand', sans-serif";
     Chart.defaults.font.size = 16;
+    
   }
 }    
 
