@@ -1,16 +1,16 @@
-.canvas_container {
-    position: relative;
-    width: 60vw;
-    height: auto;
-}
-
-.premiere-section {
+.section {
     margin-top: 2rem;
     display: flex;
-    pie-chart {
-        flex-grow: 2;
+
+    .canvas_container {
+        position: relative;
+        width: 50%;
+        height: auto;
     }
-    p {
-        flex-shrink: 2;
+
+    .chart_side {
+        position: relative;
+        width: 50%;
+        height: auto;
     }
 }

@@ -11,7 +11,7 @@
     </div>
         
     <div class="container">
-        <section class="premiere-section">
+        <section class="section">
             <pie-chart :chartData="chartData.repartitionFrance" :id="chartData.repartitionFrance.id"></pie-chart>
             <div class="chart_side">
                 <h3 class="titre--tertiaire">Comment se répartissent les gaz à effet de serre</h3>
@@ -20,7 +20,7 @@
             
         </section>
 
-        <section class="premiere-section">
+        <section class="section">
             <pie-chart :chartData="chartData.repartitionMonde" :id="chartData.repartitionMonde.id"></pie-chart>
             <div class="chart_side">
                 <h3 class="titre--tertiaire">Comment se répartissent les gaz à effet de serre</h3>

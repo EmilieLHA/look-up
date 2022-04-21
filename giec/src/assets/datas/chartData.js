@@ -1,15 +1,19 @@
 import {Chart} from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(ChartDataLabels);
+    
+Chart.defaults.font.family = "'Quicksand', sans-serif";
+Chart.defaults.plugins.datalabels.color='#FFFFFF';
+Chart.defaults.font.size = 16;
 
 export const pieChartDataFrance = {
     id: "gesFrance",
     type: "doughnut",
     data: {
-      labels: ["Production éléctrique", "Secteur de l'énergie hors élec", "Industrie", "Transport", "Residentiel","Tertiaire", "Agriculture", "Autre"],
+      labels: [ "Transport","Production éléctrique", "Industrie", "Residentiel", "Secteur de l'énergie hors élec","Tertiaire", "Autre"],
       datasets: [
         {
-          data: [13, 6, 13, 43, 14, 7, 3, 1],
+          data: [43, 6, 13, 43, 14, 7, 4],
           weight: 80,
           backgroundColor: [
             "#003259",
@@ -32,7 +36,7 @@ export const pieChartDataFrance = {
             "#e0ebf4"
           ],
           borderWidth: 3,
-          hoverOffset: 20
+          hoverOffset: 10
         }
       ]
     },
@@ -77,10 +81,10 @@ export const pieChartDataMonde = {
     id: "gesMonde",
     type: "doughnut",
     data: {
-      labels: ["Production éléctrique", "Secteur de l'énergie hors élec", "Industrie", "Transport", "Residentiel","Tertiaire", "Agriculture", "Autre"],
+      labels: [ "Transport","Production éléctrique", "Industrie", "Residentiel", "Secteur de l'énergie hors élec","Tertiaire","Autre"],
       datasets: [
         {
-          data: [42, 5, 19, 24, 6, 2, 1, 1],
+          data: [24, 6, 19, 42, 2, 5, 2],
           weight: 80,
           backgroundColor: [
             "#003259",
@@ -103,7 +107,7 @@ export const pieChartDataMonde = {
             "#e0ebf4"
           ],
           borderWidth: 3,
-          hoverOffset: 20
+          hoverOffset: 10
         }
       ]
     },
